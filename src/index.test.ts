@@ -1,4 +1,4 @@
-import { contains, map, filter, reduce, unique } from './index';
+import { contains, map, filter, reduce, unique, max } from './index';
 
 // map function Test cases
 describe('function map<T, U>', () => {
@@ -114,5 +114,19 @@ describe('function unique<T>', () => {
   });
   it(' should return unique values', () => {
     expect(unique<number>([1, 1, 2, 2, 3, 3])).toEqual([1, 2, 3]);
+  });
+});
+
+describe('function max<T>', () => {
+  it('max of [] to thorw expecton', () => {
+    expect(() => max<number>([])).toThrow();
+  });
+
+  it(' max of one element array should return element itself', () => {
+    expect(max([-89])).toEqual(-89);
+  });
+
+  it(' max should return max value', () => {
+    expect(max([1, 1, 2, 2, 3, 3])).toEqual(3);
   });
 });

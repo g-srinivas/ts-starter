@@ -44,3 +44,11 @@ export const unique = <T>(coll: T[]): T[] => {
     coll
   );
 };
+
+export const max = <T>(arr: T[]) => {
+  if (arr.length === 0) {
+    throw new Error('max of empty array');
+  } else {
+    return reduce((x, y) => (x > y ? x : y))(arr[0], arr);
+  }
+};
