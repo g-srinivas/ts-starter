@@ -1,0 +1,42 @@
+{
+  "name": "typescript-starter",
+  "private": true,
+  "version": "0.0.1-SNAPSHOT",
+  "description": "",
+  "main": "src/index.ts",
+  "author": "Pervez Iqbal",
+  "license": "MIT",
+  "scripts": {
+    "start": "webpack-dev-server",
+    "lint": "tslint src/*.js",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^20.0.5",
+    "@types/node": "^8.0.17",
+    "html-webpack-plugin": "^2.29.0",
+    "jasmine-check": "^1.0.0-rc.0",
+    "jest": "^20.0.4",
+    "jest-cli": "^20.0.4",
+    "ts-jest": "^20.0.7",
+    "ts-loader": "^2.3.2",
+    "tslint": "^5.5.0",
+    "tslint-language-service": "^0.9.6",
+    "tslint-loader": "^3.5.3",
+    "typescript": "^2.4.2",
+    "webpack": "^3.4.1",
+    "webpack-dev-server": "^2.6.1"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/node_modules/ts-jest/preprocessor.js",
+    "testRegex": "(src/.*\\.(test|spec))\\.(ts|tsx|js)$",
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ]
+  },
+  "dependencies": {
+    "immutable": "^4.0.0-rc.2"
+  }
+}
